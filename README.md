@@ -1,31 +1,30 @@
 # Goal
-This is an example on how [CloudBees Rollout](https://docs.cloudbees.com/docs/cloudbees-rollout/latest/getting-started-guide/)  can be integrated in your plain JavaScript code. (Plain means: without using a modern JS Frameworks such as REACT,NodeJS, AngualrJS etc.)  
+This is an example of how [CloudBees Rollout](https://docs.cloudbees.com/docs/cloudbees-rollout/latest/getting-started-guide/)  can be integrated into your plain JavaScript code. (Plain means: without using modern JS Frameworks such as REACT, NodeJS, AngualrJS etc.)  
 
-The [CloudBees Rollout](https://docs.cloudbees.com/docs/cloudbees-rollout/latest/getting-started-guide/) integration code can be adopted by using NodeJS and browserify to bake a single javascript file which can be executed in a standalone webbrowser 
+The [CloudBees Rollout](https://docs.cloudbees.com/docs/cloudbees-rollout/latest/getting-started-guide/) integration code can be adopted by using NodeJS and browserify to bake a single javascript file which can be executed in a standalone web browser 
 
-By doing this the instruction from [CloudBees Rollout Client Side JavaScript SDK ](https://docs.cloudbees.com/docs/cloudbees-rollout/latest/getting-started-guide/javascript-sdk) was followed. 
+By doing this the instruction from [CloudBees Rollout Client-Side JavaScript SDK ](https://docs.cloudbees.com/docs/cloudbees-rollout/latest/getting-started-guide/javascript-sdk) was followed
 
 
-
-Other integration aproaches are suported by Rollout (such as REACT f.e , see Rollout docu) 
+Other integration approaches are supported by Rollout (such as REACT f.e , see Rollout docu) 
 
 
 This simple  [JavaScript  Example](default.rollout-integration.js) demonstrates different behaviors of the index.html page depending on how the related feature flag "enableFeatureJavaScript" in Rollout is adjusted  (true or false (or killed) )
 
-The samples in the [default.rollout-integration.js](default.rollout-integration.js) and [index.html](index.html)  illustrates how the Rollout gluecode (which is CommonJS/AMD conform) can be integrated in your custom JS code.
-With the help of NodeJS, npm and browserify we can call a working rollout feature flag example on a local index.html at the end. 
+The samples in the [default.rollout-integration.js](default.rollout-integration.js) and [index.html](index.html)  illustrates how the Rollout glue code (which is CommonJS/AMD confirm) can be integrated into your custom JS code.
+With the help of NodeJS, pm, and browserify we can call a working rollout feature flag example on a local index.html at the end. 
 
 
 ## Run and test it!
 
 * [Register to Rollout](https://app.rollout.io/) and get your [ROLLOUT_APP_KEY](https://app.rollout.io/) for the application you have created there.  
-* Follow the prequiremnts below and bake your ROLLOUT_APP_KEY  in a rollout-integration-bundle.js file
-* Login to rollout UI, search and switch the `enableFeatureJavaScript` experiment from true to false . Create an Rollout account and a experiement with the enableFeatureJavaScript if not allready done. 
+* Follow the requirements below and bake your ROLLOUT_APP_KEY  in a rollout-integration-bundle.js file
+* Login to rollout UI, search and switch the `enableFeatureJavaScript` experiment from true to false. Create a Rollout account and an experiment with the enableFeatureJavaScript if not already done. 
 * Reload the index.html in your browser to see:
-  * *true*:  the JavaScript "Quadrat" function is registered as an event listener to the ui elements. You  are able click and test the enabled JavaScript behavior (defined in the Quadrat function). 
-  * *false*: the JavaScript "Quadrat" function will not be registered as an event listener . The UI has not JavaAScript to execute for the UI elements
+  * *true*:  the JavaScript "Quadrat" function is registered as an event listener to the UI elements. You are able to click and test the enabled JavaScript behavior (defined in the Quadrat function). 
+  * *false*: the JavaScript "Quadrat" function will not be registered as an event listener. The UI has not javascript to execute for the UI elements
   
- See the `function Quadrat() ` in [default.rollout-integration.js](default.rollout-integration.js) to get an understanding of this "Quadrat" function. 
+ See the `function Quadrat() ` in [default.rollout-integration.js](default.rollout-integration.js) to get an understanding of this "Quadrat" function. . 
 
 # Pre requirements
 
