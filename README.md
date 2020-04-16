@@ -45,7 +45,11 @@ npm install -g watchify
 
 # SET UP
 
+. Checkout this repostory and go the project root dir
+
 ```
+
+cd rollout-javascript-example/
 npm init
 ```
 
