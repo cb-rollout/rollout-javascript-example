@@ -13,14 +13,16 @@ async function initRollout() {
     Rox.register('default', flags);
     console.log('register.....');
     // Setup the Rollout key
-    await Rox.setup("<YOUR_ROLLOUT_APP_KEY_HERE", options);
+    await Rox.setup("5e95ad1fa6de03e3b693732d", options);
     console.log('setup done.....');
     // Boolean flag example
     if (flags.enableFeatureJavaScript.isEnabled()) {
         console.log('enableFeatureJavaScript flag is true');
-        // TODO:  Put your code here that needs to be gated
+        // Put your code here that needs to be gated
         var los = document.getElementById('los');
         los.addEventListener('click', Quadrat, true);
+        var checkFlagLink = document.getElementById('checkFlagLink');
+        checkFlagLink.addEventListener('click', CheckFlag, true);
     }else {
         console.log('enableFeatureJavaScript is disabled');
     }
@@ -37,6 +39,19 @@ function Quadrat() {
     alert("Das Quadrat von " + Eingabe.value + " = " + Ergebnis);
     Eingabe.value = 0;
 }
+
+
+function CheckFlag() {
+    var ptag = document.getElementById('par1');
+    if (flags.enableFeatureJavaScript.isEnabled()) {
+        console.log('enableFeatureJavaScript flag is true');
+        ptag.innerHTML = 'RolloutFlag enableFeaturejavaScript is enabled';
+    }else {
+        ptag.innerHTML = 'RolloutFlag enableFeaturejavaScript is disabled';
+    }
+}
+
+
 
 
 //var los = document.getElementById('los');
