@@ -13,8 +13,8 @@ To test it:
 * Follow the prerequiremnts below and bake your ROLLOUT_APP_KEY  in a rollout-integration-bundle.js file
 * Login to rollout UI, search and switch the `enableFeatureJavaScript` experiment from true to false . 
 * Reload the index.html in your browser to see:
-** true:  the JavaScript "Quadrat" method is registered as an event listener to the ui elements. You  click and test the behavior. 
-** false: the JavaScript "Quadrat" method will not be registered as an event listener . The UI has not JavaAScript to execute for the UI elements
+  * true:  the JavaScript "Quadrat" method is registered as an event listener to the ui elements. You  click and test the behavior. 
+  * false: the JavaScript "Quadrat" method will not be registered as an event listener . The UI has not JavaAScript to execute for the UI elements
 
 # PRE-REQUIREMENTS
 
