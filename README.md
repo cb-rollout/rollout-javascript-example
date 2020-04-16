@@ -18,7 +18,7 @@ With the help xof NodeJS, npm and browserify we can call a working rollout featu
 
 To test it:
 
-* Register to rollout and get your Appkey  
+* Register to rollout and get your ROLLOUT_APP_KEY  
 * Follow the prequiremnts below and bake your ROLLOUT_APP_KEY  in a rollout-integration-bundle.js file
 * Login to rollout UI, search and switch the `enableFeatureJavaScript` experiment from true to false . Create and Rollout account and a experiement with the enableFeatureJavaScript if not allready done. 
 * Reload the index.html in your browser to see:
@@ -64,7 +64,7 @@ to learn how to bake CommonJS/AMD  integration code in your application.js
 cp default.rollout-integration.js rollout-integration.js
 ```
 
-NOTE: adjust your ROLLOUT APPLICATION KEY in  .rollout-integration.js
+NOTE: adjust your ROLLOUT_APP_KEY in  .rollout-integration.js
 
 ```
   await Rox.setup('<YOUR_ROLLOUT_APP_KEY>', options);
