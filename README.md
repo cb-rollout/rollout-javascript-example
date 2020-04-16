@@ -16,7 +16,7 @@ The samples in the [default.rollout-integration.js](default.rollout-integration.
 With the help xof NodeJS, npm and browserify we can call a working rollout feature flag example at the end. 
 
 
-To test it:
+## Run and test it!
 
 * Register to rollout and get your ROLLOUT_APP_KEY  
 * Follow the prequiremnts below and bake your ROLLOUT_APP_KEY  in a rollout-integration-bundle.js file
