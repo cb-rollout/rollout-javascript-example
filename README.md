@@ -6,7 +6,7 @@ The [CloudBees Rollout](https://docs.cloudbees.com/docs/cloudbees-rollout/latest
 Other integration aproaches are suported by Rollout (such as REACT f.e , see Rollout docu) 
 
 
-This simple  [JavaScript  Example](testfolder/testfile.txt) demonstrates different behaviors of the index.html page depending on how the related feature flag "enableFeatureJavaScript" in Rollout is adjusted  (true or false (or killed) )
+This simple  [JavaScript  Example](default.rollout-integration.js) demonstrates different behaviors of the index.html page depending on how the related feature flag "enableFeatureJavaScript" in Rollout is adjusted  (true or false (or killed) )
 
 To test it:
 
