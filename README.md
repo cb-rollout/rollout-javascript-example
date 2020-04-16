@@ -50,6 +50,10 @@ from https://docs.cloudbees.com/docs/cloudbees-rollout/latest/getting-started-gu
 See this https://medium.com/jeremy-keeshin/hello-world-for-javascript-with-npm-modules-in-the-browser-6020f82d1072
 to learn how to bake CommonJS/AMD  integration code in your application.js
 
+```
+cp default.rollout-integration.js rollout-integration.js
+```
+
 NOTE: adjust your ROLLOUT APPLICATION KEY in  .rollout-integration.js
 ```
 ...
