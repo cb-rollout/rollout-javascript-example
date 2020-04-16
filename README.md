@@ -1,22 +1,32 @@
-This is an example on how CloudBees Rollout can be integrated in your javascript code.
+# Goal
+This is an example of how [CloudBees Rollout](https://docs.cloudbees.com/docs/cloudbees-rollout/latest/getting-started-guide/)  can be integrated into your plain JavaScript code. (Plain means: without using modern JS Frameworks such as REACT, NodeJS, AngualrJS etc.)  
 
-The CloudBees Rollout integration code can be adopted by using NodeJS and browserify to bake a single javascript file which can be executed in a standalone webbrowser 
+The [CloudBees Rollout](https://docs.cloudbees.com/docs/cloudbees-rollout/latest/getting-started-guide/) integration code can be adopted by using NodeJS and browserify to bake a single javascript file which can be executed in a standalone web browser 
 
-Other integration aproaches are suported by Rollout (such as REACT f.e , see Rollout docu) 
+By doing this the instruction from [CloudBees Rollout Client-Side JavaScript SDK ](https://docs.cloudbees.com/docs/cloudbees-rollout/latest/getting-started-guide/javascript-sdk) was followed
 
 
-This simple JavaScript  Example demonstrates different behaviors of the index.html page depending on how the related feature flag "enableFeatureJavaScript" in Rollout is adjusted  (true or false (or killed) )
+Other integration approaches are supported by Rollout (such as REACT f.e , see Rollout docu) 
 
-To test it:
 
-* Register to rollout and get your Appkey  
-* Follow the prequiremnts below and bake your ROLLOUT_APP_KEY  in a rollout-integration-bundle.js file
-* Login to rollout UI, search and switch the `enableFeatureJavaScript` experiment from true to false . 
+This simple  [JavaScript  Example](default.rollout-integration.js) demonstrates different behaviors of the index.html page depending on how the related feature flag "enableFeatureJavaScript" in Rollout is adjusted  (true or false (or killed) )
+
+The samples in the [default.rollout-integration.js](default.rollout-integration.js) and [index.html](index.html)  illustrates how the Rollout glue code (which is CommonJS/AMD confirm) can be integrated into your custom JS code.
+With the help of NodeJS, pm, and browserify we can call a working rollout feature flag example on a local index.html at the end. 
+
+
+## Run and test it!
+
+* [Register to Rollout](https://app.rollout.io/) and get your [ROLLOUT_APP_KEY](https://app.rollout.io/) for the application you have created there.  
+* Follow the requirements below and bake your ROLLOUT_APP_KEY  in a rollout-integration-bundle.js file
+* Login to rollout UI, search and switch the `enableFeatureJavaScript` experiment from true to false. Create a Rollout account and an experiment with the enableFeatureJavaScript if not already done. 
 * Reload the index.html in your browser to see:
-  * true:  the JavaScript "Quadrat" method is registered as an event listener to the ui elements. You  click and test the behavior. 
-  * false: the JavaScript "Quadrat" method will not be registered as an event listener . The UI has not JavaAScript to execute for the UI elements
+  * *true*:  the JavaScript "Quadrat" function is registered as an event listener to the UI elements. You are able to click and test the enabled JavaScript behavior (defined in the Quadrat function). 
+  * *false*: the JavaScript "Quadrat" function will not be registered as an event listener. The UI has not javascript to execute for the UI elements
+  
+ See the `function Quadrat() ` in [default.rollout-integration.js](default.rollout-integration.js) to get an understanding of this "Quadrat" function. . 
 
-# PRE-REQUIREMENTS
+# Pre requirements
 
 Install Node.js
 ```
@@ -36,29 +46,33 @@ npm install -g watchify
 
 # SET UP
 
+. Checkout this repostory and go the project root dir
+
 ```
+
+cd rollout-javascript-example/
 npm init
 ```
 
 from https://docs.cloudbees.com/docs/cloudbees-rollout/latest/getting-started-guide/javascript-sdk
 ## Add Rollout JavaScript SDK package as your application dependency
+
 ```
  npm i rox-browser --save
 ```
 
 ## Rename default file to rollout-integration.js 
 See this https://medium.com/jeremy-keeshin/hello-world-for-javascript-with-npm-modules-in-the-browser-6020f82d1072
-to learn how to bake CommonJS/AMD  integration code in your application.js
+to learn how to bake CommonJS/AMD  integration code in your application.js if not stay on modern JS Frameworks such as REACT , AngularJS, NodeJS etc. 
 
 ```
 cp default.rollout-integration.js rollout-integration.js
 ```
 
-NOTE: adjust your ROLLOUT APPLICATION KEY in  .rollout-integration.js
+NOTE: adjust your ROLLOUT_APP_KEY in  .rollout-integration.js
+
 ```
-...
   await Rox.setup('<YOUR_ROLLOUT_APP_KEY>', options);
-...
 ```
 
 ## and write your rollout intgeration code there
@@ -97,12 +111,21 @@ async function initRollout() {
 ```
 
 ## Bake it to a bundle which enables a WebBrowser to execute the resulting JS code. 
+
 ```
 #or watchify 
  browserify --debug  rollout-integration.js -o rollout-integration-bundle.js
 ```
 
+
+
 ## open and test  
+
+Keep in your mind that the `rollout-integration-bundle.js`  is refernced in the `index.html` file
+
+```
+ <script src="rollout-integration-bundle.js"></script>
+```
 
 ```
 open index.html 
