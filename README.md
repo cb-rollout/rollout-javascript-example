@@ -37,12 +37,12 @@ npm init
 ```
 
 from https://docs.cloudbees.com/docs/cloudbees-rollout/latest/getting-started-guide/javascript-sdk
-# Add Rollout JavaScript SDK package as your application dependency
+## Add Rollout JavaScript SDK package as your application dependency
 ```
  npm i rox-browser --save
 ```
 
-# Write your rollout intgeration code
+## Rename default file to rollout-integration.js 
 See this https://medium.com/jeremy-keeshin/hello-world-for-javascript-with-npm-modules-in-the-browser-6020f82d1072
 to learn how to bake CommonJS/AMD  integration code in your application.js
 
@@ -53,6 +53,7 @@ NOTE: adjust your ROLLOUT APPLICATION KEY in  .rollout-integration.js
 ...
 ```
 
+## and write your rollout intgeration code there
 
 Example
 .rollout-integration.js
@@ -72,8 +73,17 @@ async function initRollout() {
     Rox.register('default', flags);
     console.log('register.....');
     // Setup the Rollout key
-    await Rox.setup('5e95ad1fa6de03e3b693732d', options);
+    await Rox.setup('XXXX', options);
     console.log('setup done.....');
+    
+     if (flags.enableFeatureJavaScript.isEnabled()) {
+        console.log('enableFeatureJavaScript flag is true');
+        // TODO:  Put your code here that needs to be gated
+        var los = document.getElementById('los');
+        los.addEventListener('click', Quadrat, true);
+    }else {
+        console.log('enableFeatureJavaScript is disabled');
+    }
   ....
 }
 ```
