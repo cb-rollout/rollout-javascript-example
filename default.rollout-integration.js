@@ -13,7 +13,7 @@ async function initRollout() {
     Rox.register('default', flags);
     console.log('register.....');
     // Setup the Rollout key
-    await Rox.setup("5e95ad1fa6de03e3b693732d", options);
+    await Rox.setup("<ROLLOUT_APP_KEY>", options);
     console.log('setup done.....');
     // Boolean flag example
     if (flags.enableFeatureJavaScript.isEnabled()) {
