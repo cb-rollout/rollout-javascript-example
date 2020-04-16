@@ -42,6 +42,7 @@ npm init
 
 from https://docs.cloudbees.com/docs/cloudbees-rollout/latest/getting-started-guide/javascript-sdk
 ## Add Rollout JavaScript SDK package as your application dependency
+
 ```
  npm i rox-browser --save
 ```
@@ -55,10 +56,9 @@ cp default.rollout-integration.js rollout-integration.js
 ```
 
 NOTE: adjust your ROLLOUT APPLICATION KEY in  .rollout-integration.js
+
 ```
-...
   await Rox.setup('<YOUR_ROLLOUT_APP_KEY>', options);
-...
 ```
 
 ## and write your rollout intgeration code there
