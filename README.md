@@ -12,7 +12,7 @@ Other integration aproaches are suported by Rollout (such as REACT f.e , see Rol
 
 This simple  [JavaScript  Example](default.rollout-integration.js) demonstrates different behaviors of the index.html page depending on how the related feature flag "enableFeatureJavaScript" in Rollout is adjusted  (true or false (or killed) )
 
-The samples in the [default.rollout-integration.js](default.rollout-integration.js) and [index.html](index.html)  illustrates how the Rollout gluecode (which is CommonJS/AMD compiltant) can be integrated in your custom JS code.
+The samples in the [default.rollout-integration.js](default.rollout-integration.js) and [index.html](index.html)  illustrates how the Rollout gluecode (which is CommonJS/AMD conform) can be integrated in your custom JS code.
 With the help xof NodeJS, npm and browserify we can call a working rollout feature flag example at the end. 
 
 
