@@ -18,7 +18,7 @@ With the help xof NodeJS, npm and browserify we can call a working rollout featu
 
 ## Run and test it!
 
-* [Register to Rollout](https://app.rollout.io/) and get your ROLLOUT_APP_KEY  
+* [Register to Rollout](https://app.rollout.io/) and get your [ROLLOUT_APP_KEY](https://app.rollout.io/) for the application you have created there.  
 * Follow the prequiremnts below and bake your ROLLOUT_APP_KEY  in a rollout-integration-bundle.js file
 * Login to rollout UI, search and switch the `enableFeatureJavaScript` experiment from true to false . Create an Rollout account and a experiement with the enableFeatureJavaScript if not allready done. 
 * Reload the index.html in your browser to see:
