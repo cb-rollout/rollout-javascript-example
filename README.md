@@ -1,5 +1,5 @@
 # Goal
-This is an example on how [CloudBees Rollout](https://docs.cloudbees.com/docs/cloudbees-rollout/latest/getting-started-guide/)  can be integrated in your JavaScript code.
+This is an example on how [CloudBees Rollout](https://docs.cloudbees.com/docs/cloudbees-rollout/latest/getting-started-guide/)  can be integrated in your plain JavaScript code. (Plain means: without using a modern JS Frameworks such as REACT,NodeJS, AngualrJS etc.)  
 
 The [CloudBees Rollout](https://docs.cloudbees.com/docs/cloudbees-rollout/latest/getting-started-guide/) integration code can be adopted by using NodeJS and browserify to bake a single javascript file which can be executed in a standalone webbrowser 
 
