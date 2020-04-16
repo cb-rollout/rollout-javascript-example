@@ -5,7 +5,8 @@
   <title>externes JavaScript in HTML einbinden</title>
 </head>
 <body>
-  <h1>externes JavaScript in HTML einbinden</h1>
+
+  <h1>Example1:Call a simple JavaScript Calculator if the Flag is enabled</h1>
  
   <main>
     <input type="number" id="Eingabe" value="0" size="3">
@@ -13,15 +14,15 @@
     <button type="button" id="los">calculate square</button>
   </main>
 
-
+  <h1>Example2: show the currentflagstate in the ui, Follow the scripts to the how it works </h1>
     <a href="#" onclick="CheckFlag();return false;" id="checkFlagLink">
       CLICK ON ME
     </a>
 
-  and the current Flagstate will be displayed below (reload the page after switching the flag)
+  and the current Flag stete will be displayed below once the link is pressed
 
   <div class="footer_left">
-    <p id="par1">RolloutFlag enableFeaturejavaScript disabled</p>
+    <p id="par1">RolloutFlag enableFeaturejavaScript is disabled</p>
   </div>
   <script src="rollout-integration-bundle.js"></script>
 </body>
