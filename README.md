@@ -92,13 +92,13 @@ async function initRollout() {
 }
 ```
 
-# Bake it to a bundle which enables a WebBrowser to execute the resulting JS code. 
+## Bake it to a bundle which enables a WebBrowser to execute the resulting JS code. 
 ```
 #or watchify 
  browserify --debug  rollout-integration.js -o rollout-integration-bundle.js
 ```
 
-# open and test  
+## open and test  
 
 ```
 open index.html 
