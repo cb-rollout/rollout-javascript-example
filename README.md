@@ -3,7 +3,7 @@ This is an example on how [CloudBees Rollout](https://docs.cloudbees.com/docs/cl
 
 The [CloudBees Rollout](https://docs.cloudbees.com/docs/cloudbees-rollout/latest/getting-started-guide/) integration code can be adopted by using NodeJS and browserify to bake a single javascript file which can be executed in a standalone webbrowser 
 
-By doing this the instruction from [cloudBees Rollout Client Side JavaScript SDK ](https://docs.cloudbees.com/docs/cloudbees-rollout/latest/getting-started-guide/javascript-sdk) was followed. 
+By doing this the instruction from [CloudBees Rollout Client Side JavaScript SDK ](https://docs.cloudbees.com/docs/cloudbees-rollout/latest/getting-started-guide/javascript-sdk) was followed. 
 
 
 
