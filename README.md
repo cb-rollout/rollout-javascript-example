@@ -18,7 +18,7 @@ To test it:
 
 # PRE-REQUIREMENTS
 
-Install Node3js
+Install Node.js
 ```
 brew install node
 
