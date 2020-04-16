@@ -1,3 +1,4 @@
+# Goal
 This is an example on how CloudBees Rollout can be integrated in your javascript code.
 
 The CloudBees Rollout integration code can be adopted by using NodeJS and browserify to bake a single javascript file which can be executed in a standalone webbrowser 
@@ -16,7 +17,7 @@ To test it:
   * true:  the JavaScript "Quadrat" method is registered as an event listener to the ui elements. You  click and test the behavior. 
   * false: the JavaScript "Quadrat" method will not be registered as an event listener . The UI has not JavaAScript to execute for the UI elements
 
-# PRE-REQUIREMENTS
+# Pre requirements
 
 Install Node.js
 ```
