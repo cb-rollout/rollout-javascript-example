@@ -1,5 +1,18 @@
+This is an example on how CloudBees Rollout can be integrated in your javascript code.
+The rollout integration code can be adopted by using NodeJS and browserify to bake a sigle .js js file which can be executet in a standalone browser, 
 
-#PRE-REQUIREMENTS
+This simple javascript ecxample demonstrates diffedrnet behaviors of the index.html page depending on whether the flag 
+
+"enableFeatureJavaScript" is adjusted to true or false (or killed) 
+
+To test it:
+
+* Login to rollout UI, search and switch the enableFeatureJavaScript  experiment from true to false . reload the index.html in your browser to see:
+
+* true:  the JavaScript "Quadrat" method is registered as an event listener to the ui elements. You  click and test the behavior. 
+* false: the JavaScript "Quadrat" method will not be registered as an event listener . The UI has not JavaAScript to execute for the UI elements
+
+# PRE-REQUIREMENTS
 
 Install Node3js
 ```
@@ -17,7 +30,7 @@ Install watchify with
 npm install -g watchify
 ```
 
-#SET UP
+# SET UP
 
 ```
 npm init
@@ -71,13 +84,10 @@ async function initRollout() {
  browserify --debug  rollout-integration.js -o rollout-integration-bundle.js
 ```
 
-# open and test 
+# open and test  
 
 ```
 open index.html 
 ```
 
--> Login to rollout UI, search and switch the enableFeatureJavaScript  experiment from true to false . reload the index.html in your browser to see:
 
-* true:  the JavaScript "Quadrat" method is registered as an event listener to the ui elements. You  click and test the behavior. 
-* false: the JavaScript "Quadrat" method will not be registered as an event listener . The UI has not JavaAScript to execute for the UI elements
