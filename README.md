@@ -22,10 +22,10 @@ With the help of NodeJS, npm and browserify we can call a working rollout featur
 * Follow the prequiremnts below and bake your ROLLOUT_APP_KEY  in a rollout-integration-bundle.js file
 * Login to rollout UI, search and switch the `enableFeatureJavaScript` experiment from true to false . Create an Rollout account and a experiement with the enableFeatureJavaScript if not allready done. 
 * Reload the index.html in your browser to see:
-  * *true*:  the JavaScript "Quadrat" function is registered as an event listener to the ui elements. You  click and test the behavior. 
+  * *true*:  the JavaScript "Quadrat" function is registered as an event listener to the ui elements. You  are able click and test the enabled JavaScript behavior (defined in the Quadrat function). 
   * *false*: the JavaScript "Quadrat" function will not be registered as an event listener . The UI has not JavaAScript to execute for the UI elements
   
- See the `function Quadrat() ` in [default.rollout-integration.js](default.rollout-integration.js) to get an understanding of this "Quadrad" function. 
+ See the `function Quadrat() ` in [default.rollout-integration.js](default.rollout-integration.js) to get an understanding of this "Quadrat" function. 
 
 # Pre requirements
 
