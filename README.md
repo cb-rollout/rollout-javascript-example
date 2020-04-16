@@ -64,7 +64,7 @@ from https://docs.cloudbees.com/docs/cloudbees-rollout/latest/getting-started-gu
 
 ## Rename default file to rollout-integration.js 
 See this https://medium.com/jeremy-keeshin/hello-world-for-javascript-with-npm-modules-in-the-browser-6020f82d1072
-to learn how to bake CommonJS/AMD  integration code in your application.js
+to learn how to bake CommonJS/AMD  integration code in your application.js if not stay on modern JS Frameworks such as REACT , AngularJS, NodeJS etc. 
 
 ```
 cp default.rollout-integration.js rollout-integration.js
