@@ -46,7 +46,7 @@ npm install -g watchify
 
 # SET UP
 
-. Checkout this repostory and go the project root dir
+Checkout this repostory and go the project root dir
 
 ```
 
@@ -58,7 +58,7 @@ from https://docs.cloudbees.com/docs/cloudbees-rollout/latest/getting-started-gu
 ## Add Rollout JavaScript SDK package as your application dependency
 
 ```
- npm i rox-browser --save
+ npm -i rox-browser --save
 ```
 
 ## Rename default file to rollout-integration.js 
@@ -114,9 +114,8 @@ async function initRollout() {
 
 ```
 #or watchify 
- browserify --debug  rollout-integration.js -o rollout-integration-bundle.js
+ww browserify --debug  rollout-integration.js -o rollout-integration-bundle.js
 ```
-
 
 
 ## open and test  
