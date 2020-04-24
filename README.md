@@ -114,7 +114,7 @@ async function initRollout() {
 
 ```
 #or watchify 
-ww browserify --debug  rollout-integration.js -o rollout-integration-bundle.js
+browserify --debug  rollout-integration.js -o rollout-integration-bundle.js
 ```
 
 
